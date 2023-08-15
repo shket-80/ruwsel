@@ -1,0 +1,40 @@
+header {
+	height: 84px;
+	border: 1px blue solid;
+}
+
+.navbar {
+	margin-top: 13px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo {
+	font-size: 25px;
+	color: #002265;
+}
+
+.logo__2 {
+	color: #14279B;
+}
+
+.nav-menu {
+	//width: 678px;
+	font-size: 25px;
+	display: flex;
+	justify-content: space-between;
+
+	a {
+		//width: 150px;
+		text-align: center;
+		text-decoration: none;
+		color: #212121;
+		padding: 0 15px 0 15px;
+		border-radius: 5px;
+		//border: 1px rgb(127, 153, 41) solid;
+	}
+
+	a:hover {
+		background: blue;
+	}
+}

@@ -1,3 +1,27 @@
 // Обнуление стилей
 @import "config/reset.scss"; // Обнуление стилей
-@import "config/fonts.scss";
+//@import "config/fonts.scss";
+
+body {
+	padding: 35px 5px 5px 5px;
+}
+
+.container {
+	max-width: 1440px;
+	min-height: 2504px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	max-width: 1172px;
+	margin: 0 auto;
+}
+
+.content {
+	min-height: 1729px;
+	background-image: url(../img/Background.png);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+@import "config/header.scss";

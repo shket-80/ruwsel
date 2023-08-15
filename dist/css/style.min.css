@@ -69,12 +69,72 @@ select {
 
 /* Remove all animations and transitions for people that prefer not to see them */
 
-@font-face {
-  font-family: DMSans;
-  font-display: swap;
-  src: url("../fonts/DMSans-Bold.woff2") format("woff2"), url("../fonts/DMSans-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
+body {
+  padding: 35px 5px 5px 5px;
+}
+
+.container {
+  max-width: 1440px;
+  min-height: 2504px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1172px;
+  margin: 0 auto;
+}
+
+.content {
+  min-height: 1729px;
+  background-image: url(../img/Background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header {
+  height: 84px;
+  border: 1px blue solid;
+}
+
+.navbar {
+  margin-top: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo {
+  font-size: 25px;
+  color: #002265;
+}
+
+.logo__2 {
+  color: #14279B;
+}
+
+.nav-menu {
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-menu a {
+  text-align: center;
+  text-decoration: none;
+  color: #212121;
+  padding: 0 15px 0 15px;
+  border-radius: 5px;
+}
+
+.nav-menu a:hover {
+  background: blue;
 }
 
 @media (prefers-reduced-motion: reduce) {
