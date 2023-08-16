@@ -69,13 +69,62 @@ select {
 
 /* Remove all animations and transitions for people that prefer not to see them */
 
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Bold.woff2") format("woff2"), url("../fonts/Poppins-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
 body {
   padding: 35px 5px 5px 5px;
+  font-family: Roboto;
+  font-weight: 400;
 }
 
 .container {
   max-width: 1440px;
-  min-height: 2504px;
   margin: 0 auto;
 }
 
@@ -93,7 +142,6 @@ body {
 
 header {
   height: 84px;
-  border: 1px blue solid;
 }
 
 .navbar {
@@ -107,6 +155,8 @@ header {
 }
 
 .logo {
+  font-family: Poppins;
+  font-weight: 400;
   font-size: 25px;
   color: #002265;
 }
@@ -135,6 +185,86 @@ header {
 
 .nav-menu a:hover {
   background: blue;
+  color: #fff;
+}
+
+.block1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 41px;
+}
+
+.block1__left {
+  padding-top: 40px;
+  color: #002265;
+}
+
+.block1__left span {
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  letter-spacing: 0.5%;
+}
+
+.block1__left .block1__p {
+  max-width: 600px;
+  margin-top: 42px;
+}
+
+.block1__left .block1__p p {
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 23px;
+  letter-spacing: 1.5%;
+}
+
+.block1__left h1 {
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  letter-spacing: 0.5%;
+}
+
+.block1__right {
+  width: 501px;
+  height: 467px;
+}
+
+.block2 {
+  padding-top: 118px;
+}
+
+.block2 .title {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.block2 .title span {
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 35px;
+  letter-spacing: 0.5%;
+  color: #14279B;
+}
+
+.block2 .title .span2 {
+  color: #002265;
+  font-weight: 700;
+}
+
+.worker {
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (prefers-reduced-motion: reduce) {

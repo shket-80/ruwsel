@@ -1,0 +1,44 @@
+.block1 {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 41px;
+
+	&__left {
+		padding-top: 40px;
+		color: #002265;
+	}
+
+	&__left span {
+		font-family: Roboto;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 35px;
+		letter-spacing: 0.5%;
+	}
+
+	&__left .block1__p {
+		max-width: 600px;
+		margin-top: 42px;
+	}
+
+	&__left .block1__p p {
+		font-family: Roboto;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 23px;
+		letter-spacing: 1.5%;
+	}
+
+	&__left h1 {
+		font-family: Roboto;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 50px;
+		letter-spacing: 0.5%;
+	}
+
+	&__right {
+		width: 501px;
+		height: 467px;
+	}
+}

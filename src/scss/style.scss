@@ -1,14 +1,17 @@
 // Обнуление стилей
 @import "config/reset.scss"; // Обнуление стилей
-//@import "config/fonts.scss";
+@import "config/fonts.scss";
 
 body {
 	padding: 35px 5px 5px 5px;
+	font-family: Roboto;
+	font-weight: 400;
 }
+
 
 .container {
 	max-width: 1440px;
-	min-height: 2504px;
+	//min-height: 2504px;
 	margin: 0 auto;
 }
 
@@ -25,3 +28,5 @@ body {
 }
 
 @import "config/header.scss";
+@import "config/screen1.scss";
+@import "config/screen2.scss";

@@ -1,6 +1,6 @@
 header {
 	height: 84px;
-	border: 1px blue solid;
+	//border: 1px blue solid;
 }
 
 .navbar {
@@ -10,6 +10,8 @@ header {
 }
 
 .logo {
+	font-family: Poppins;
+	font-weight: 400;
 	font-size: 25px;
 	color: #002265;
 }
@@ -36,5 +38,7 @@ header {
 
 	a:hover {
 		background: blue;
+		color: #fff;
 	}
+
 }

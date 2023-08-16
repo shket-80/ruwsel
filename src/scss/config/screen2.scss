@@ -1,0 +1,27 @@
+.block2 {
+	padding-top: 118px;
+
+	.title {
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.title span {
+		font-family: Roboto;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 35px;
+		letter-spacing: 0.5%;
+		color: #14279B;
+	}
+
+	.title .span2 {
+		color: #002265;
+		font-weight: 700;
+	}
+}
+
+.worker {
+	margin-top: 60px;
+	display: flex;
+}
