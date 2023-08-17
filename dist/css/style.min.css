@@ -94,6 +94,14 @@ select {
 }
 
 @font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
   font-family: Poppins;
   font-display: swap;
   src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff");
@@ -106,14 +114,6 @@ select {
   font-display: swap;
   src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
   font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Roboto;
-  font-display: swap;
-  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -322,6 +322,66 @@ footer h4 {
   font-size: 35px;
   letter-spacing: 0.5%;
   color: #212121;
+}
+
+.calck {
+  width: 320px;
+  height: 500px;
+  background: #000;
+  border-radius: 5px;
+}
+
+.table {
+  color: #fff;
+  padding: 10px;
+  text-align: right;
+  margin-bottom: 30px;
+  border-bottom: 5px rgb(39, 38, 38) solid;
+}
+
+.table__info {
+  font-size: 30px;
+}
+
+.group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 8px 8px 8px 8px;
+}
+
+.group__btn {
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+.group__btn:active {
+  border: 5px #313131 solid;
+  font-size: 25px;
+}
+
+.btn-color {
+  background: rgb(238, 236, 112);
+  color: #000;
+}
+
+#zero {
+  width: 148px;
+}
+
+#clean {
+  background: red;
+  color: #fff;
+}
+
+#clean:active {
+  border: 5px #313131 solid;
+  font-size: 25px;
 }
 
 @media screen and (max-width: 952px) {

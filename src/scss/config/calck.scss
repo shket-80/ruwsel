@@ -1,0 +1,56 @@
+.calck {
+	width: 320px;
+	height: 500px;
+	background: #000;
+	border-radius: 5px;
+}
+
+.table {
+	color: #fff;
+	padding: 10px;
+	text-align: right;
+	margin-bottom: 30px;
+	border-bottom: 5px rgb(39, 38, 38) solid;
+
+	&__info {
+		font-size: 30px;
+	}
+}
+
+.group {
+	display: flex;
+	justify-content: space-between;
+	margin: 8px 8px 8px 8px;
+}
+
+.group__btn {
+	width: 70px;
+	height: 70px;
+	font-size: 30px;
+	border-radius: 5px;
+}
+
+.group__btn:active {
+	border: 5px #313131 solid;
+	font-size: 25px;
+}
+
+.btn-color {
+	background: rgb(238, 236, 112);
+	color: #000;
+}
+
+#zero {
+	width: 148px;
+}
+
+
+#clean {
+	background: red;
+	color: #fff;
+}
+
+#clean:active {
+	border: 5px #313131 solid;
+	font-size: 25px;
+}

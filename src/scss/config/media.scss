@@ -1,0 +1,47 @@
+@media screen and (max-width: 952px) {
+	.block1 {
+		flex-direction: column;
+
+		&__left {
+			order: 1;
+			text-align: center;
+		}
+
+		&__left .block1__p {
+			text-align: center;
+			margin: 42px auto;
+		}
+
+		&__right {
+			margin: 0 auto;
+
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.contact {
+		img {
+			margin: 30px auto;
+		}
+
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.nav-menu {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.worker {
+		flex-direction: column;
+
+		&__viev {
+			margin: 0 auto;
+		}
+	}
+}

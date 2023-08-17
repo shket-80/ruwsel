@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./html/head.html',{
+"title": "js",
+})
+
+<body>
+	<section class="container">
+		@@include("./html/header.html")
+		<div class="calck">
+
+			<div class="table">
+				<span class="table__info">0</span>
+			</div>
+
+			<div class="group">
+				<button class="group__btn" id="clean" type="button">c</button>
+				<button class="group__btn btn-color" type="button">%</button>
+				<button class="group__btn btn-color" type="button">/</button>
+				<button class="group__btn btn-color" type="button">*</button>
+			</div>
+
+			<div class="group">
+				<button class="group__btn" type="button">7</button>
+				<button class="group__btn" type="button">8</button>
+				<button class="group__btn" type="button">9</button>
+				<button class="group__btn btn-color" type="button">+</button>
+			</div>
+
+			<div class="group">
+				<button class="group__btn" type="button">4</button>
+				<button class="group__btn" type="button">5</button>
+				<button class="group__btn" type="button">6</button>
+				<button class="group__btn btn-color" type="button">-</button>
+			</div>
+
+			<div class="group">
+				<button class="group__btn" type="button">1</button>
+				<button class="group__btn" type="button">2</button>
+				<button class="group__btn" type="button">3</button>
+				<button class="group__btn btn-color" type="button">=</button>
+			</div>
+
+			<div class="group">
+				<button class="group__btn " id="zero" type="button">0</button>
+				<button class="group__btn" type="button">,</button>
+				<button class="group__btn btn-color" type="button">del</button>
+			</div>
+
+		</div>
+		@@include("./html/footor.html")
+	</section>
+	<script type="module" src="js/script.js"></script>
+</body>
+
+</html>
