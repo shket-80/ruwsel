@@ -24,10 +24,10 @@
               }
 
               @font-face {
-                font-family: Roboto;
+                font-family: Poppins;
                 font-display: swap;
-                src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
-                font-weight: 400;
+                src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff");
+                font-weight: 500;
                 font-style: normal;
               }
 
@@ -40,9 +40,9 @@
               }
 
               @font-face {
-                font-family: Poppins;
+                font-family: Roboto;
                 font-display: swap;
-                src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff");
-                font-weight: 500;
+                src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+                font-weight: 400;
                 font-style: normal;
               }

@@ -30,3 +30,108 @@ body {
 @import "config/header.scss";
 @import "config/screen1.scss";
 @import "config/screen2.scss";
+
+footer {
+	//height: 834px;
+	padding-top: 118px;
+	background-image: url(../img/Vector.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	text-align: center;
+
+	h4 {
+		margin-top: 370px;
+		font-weight: 400;
+		font-size: 25px;
+		color: #fff;
+	}
+}
+
+.title {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.title span {
+	font-family: Roboto;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 35px;
+	letter-spacing: 0.5%;
+	color: #14279B;
+}
+
+.title .span2 {
+	color: #002265;
+	font-weight: 700;
+}
+
+.contact {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 60px;
+}
+
+.contact__block {
+	.img {
+		margin-bottom: 30px;
+	}
+
+	span {
+		font-family: Roboto;
+		font-weight: 400;
+		font-style: normal;
+		font-size: 35px;
+		letter-spacing: 0.5%;
+		color: #212121;
+
+	}
+}
+
+@media screen and (max-width: 952px) {
+	.block1 {
+		flex-direction: column;
+
+		&__left {
+			order: 1;
+			text-align: center;
+		}
+
+		&__left .block1__p {
+			text-align: center;
+			margin: 42px auto;
+		}
+
+		&__right {
+			margin: 0 auto;
+
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.contact {
+		img {
+			margin: 30px auto;
+		}
+
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.nav-menu {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.worker {
+		flex-direction: column;
+
+		&__viev {
+			margin: 0 auto;
+		}
+	}
+}
