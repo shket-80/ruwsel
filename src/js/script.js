@@ -1,3 +1,21 @@
+
+// ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+//  Плавная прокрутка до якоря
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+for (let anchor of anchors) {
+	anchor.addEventListener("click", function (event) {
+		event.preventDefault();//Отмена дефолтного события
+		const blockID = anchor.getAttribute('href');
+		document.querySelector('' + blockID).scrollIntoView({
+			block: 'start',
+			behavior: 'smooth',
+		})
+	})
+}
+// |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
 const result = document.querySelector('.table__info');//Поле с вычеслениями
 const btn = document.querySelectorAll('.group__btn');//Кнопки 
 
