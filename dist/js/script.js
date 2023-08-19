@@ -24,25 +24,32 @@ let action = '';
 let clickAction = false;
 let finish = 0;
 
+let delite = '';
+
 /*События кнопок  */
 btn.forEach(f => f.addEventListener('click', function () {
 
 	if (f.classList.contains("btn-color")) {//!.......................................
 		if (f.innerHTML == "=")
 			actions(action, f.innerHTML);
+		if (f.innerHTML == 'del')
+			del();
 		//?____________________________________________________________
 		if (f.innerHTML == "-" || f.innerHTML == "+" ||
 			f.innerHTML == "*" || f.innerHTML == "/") {
+
 			//!________________________________________________________
 			if (clickAction == false && finish == 0) {
 				result.innerHTML = result.innerHTML + f.innerHTML;
 				clickAction = true;
 				action = f.innerHTML;
+
 			}
 			else {
 				if (finish == 0) {
 					action = f.innerHTML;
 					result.innerHTML = result.innerHTML.slice(0, -1) + f.innerHTML;
+
 				}
 
 				else
@@ -61,7 +68,60 @@ btn.forEach(f => f.addEventListener('click', function () {
 		//!<<<<<<<<<<<<<<<<<<<<<<<
 	}
 }));
+//del
+function del() {
+	delite = result.innerHTML;
+	if (action == '') {
+		a = b = c = '';
+		for (let i = 0; i < delite.length; i++) {
+			a += delite.charAt(i)
+		}
+		if (a.length > 1)
+			a = a.slice(0, -1);
+		else
+			a = '0';
+		result.innerHTML = a;
+	}
+	else {
+		delite = delite.split(action);
+		if (delite[1].length == 0) {
+			a = c = '';
+			for (let k of delite[0]) {
+				a += k;
+			}
+			a += action;
+			if (a.length > 1)
+				a = a.slice(0, -1);
+			else
+				a = '0';
+			result.innerHTML = a;
+			action = '';
+			clickAction = false;
+			finish = 0;
+			//alert();
+		}
+		else {
 
+			b = '';
+			for (let k of delite[1]) {
+				b += k;
+			}
+			if (b.length > 0) {
+				b = b.slice(0, -1);
+				if (c == '')
+					result.innerHTML = a + action + b;
+				else
+					result.innerHTML = c + action + b;
+			}
+			else {
+				result.innerHTML = a + action;
+				b = '';
+			}
+
+
+		}
+	}
+}
 // Сброс
 function cleen() {
 	a = ''; b = ''; c = '';
