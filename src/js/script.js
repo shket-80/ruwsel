@@ -23,7 +23,8 @@ let a = ''; let b = ''; let c = '';
 let action = '';
 let clickAction = false;
 let finish = 0;
-
+let procentA = ''; let procentB = '';
+let procent = false;
 let delite = '';
 
 /*События кнопок  */
@@ -34,6 +35,8 @@ btn.forEach(f => f.addEventListener('click', function () {
 			actions(action, f.innerHTML);
 		if (f.innerHTML == 'del')
 			del();
+		if (f.innerHTML == "%")
+			proCent();
 		//?____________________________________________________________
 		if (f.innerHTML == "-" || f.innerHTML == "+" ||
 			f.innerHTML == "*" || f.innerHTML == "/") {
@@ -43,7 +46,6 @@ btn.forEach(f => f.addEventListener('click', function () {
 				result.innerHTML = result.innerHTML + f.innerHTML;
 				clickAction = true;
 				action = f.innerHTML;
-
 			}
 			else {
 				if (finish == 0) {
@@ -68,6 +70,38 @@ btn.forEach(f => f.addEventListener('click', function () {
 		//!<<<<<<<<<<<<<<<<<<<<<<<
 	}
 }));
+
+// proCent
+function proCent() {
+	if (clickAction == false) {
+		procA();
+	}
+	else {
+		procB();
+	}
+
+}
+
+function procA() {
+	if (Number(a) > 0) {
+		a = Number(a) / 100;
+		result.innerHTML = a;
+	}
+}
+
+function procB() {
+	if (c == '')
+		b = (Number(a) / 100) * b;
+	else
+		b = (Number(c) / 100) * b;
+	switch (action) {
+		case '+': sum('='); break;
+		case '-': minus('='); break;
+		case '*': multiply('='); break;
+		case '/': share('='); break;
+		default: break;
+	}
+}
 //del
 function del() {
 	delite = result.innerHTML;
@@ -98,7 +132,6 @@ function del() {
 			action = '';
 			clickAction = false;
 			finish = 0;
-			//alert();
 		}
 		else {
 
@@ -129,6 +162,8 @@ function cleen() {
 	clickAction = false;
 	result.innerHTML = '0';
 	finish = 0;
+	procent = false;
+	procentA = ''; procentB = '';
 }
 
 function actions(value, value2) {
@@ -151,23 +186,41 @@ function sortBtn(value) {
 }
 
 function actionA(value) {
-	if (Number(a) == 0 && Number(value) == 0)
+	if (a == '0' && value == '0')
 		a = 0
-	else if (Number(a) == 0)
+	else if (result.innerHTML == '0' && value != '.')
 		a = value;
-	else
-		a += value;
+	else if (result.innerHTML.at(-1) == '.' && value == '.')
+		;
+	else if (a == '' && value == '.')
+		a = 0 + '.';
+	else {
+		if (a.includes('.') == true && value == '.')
+			;
+		else
+			a += value;
+	}
+
 	result.innerHTML = a;
 	c = '';
 }
 function actionB(value) {
 	//!>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-	if (Number(b) == 0 && Number(value) == 0)
+	if (b == '0' && value == '0')
 		b = 0;
-	else if (Number(b) == 0)
-		b = value;
-	else
+	else if (b === "0." && value != '.')
 		b += value;
+	else if (b == '0' && value != '.')
+		b = value;
+	else if (result.innerHTML.at(-1) == '.' && value == '.')
+		;
+	else if (b == '' && value == '.')
+		b = 0 + '.';
+	else
+		if (b.includes('.') == true && value == '.')
+			;
+		else
+			b += value;
 	//!<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 	if (c == '')
 		result.innerHTML = a + action + b;
@@ -217,16 +270,23 @@ function share(value) {
 // В этой функции повторяющийся код для sum() и minus()
 function common(value) {
 	if (value != '=') {
-		result.innerHTML = c + value;
+		if (String(c).includes('.') == false)
+			result.innerHTML = c + value;
+		else
+			result.innerHTML = Number(c).toFixed(3).replace(/0*$/, "") + value;
 		a = b = '';
 		finish = 0;
 		action = value;
 	}
 	else {
-		result.innerHTML = c
+		if (String(c).includes('.') == false)
+			result.innerHTML = c;
+		else
+			result.innerHTML = Number(c).toFixed(3).replace(/0*$/, "");
 		a = b = '';
 		finish = 0;
 		action = '';
 		clickAction = false;
 	}
 }
+
