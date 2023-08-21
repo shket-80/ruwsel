@@ -24,25 +24,21 @@ let action = '';
 let clickAction = false;
 let finish = 0;
 let procentA = ''; let procentB = '';
-let procent = false;
 let delite = '';
 
 /*События кнопок  */
 btn.forEach(f => f.addEventListener('click', function () {
-
-	if (f.classList.contains("btn-color")) {//!.......................................
-		if (f.innerHTML == "=")
-			actions(action, f.innerHTML);
-		if (f.innerHTML == 'del')
-			del();
-		if (f.innerHTML == "%")
-			proCent();
-		//?____________________________________________________________
+	/* Если у нажатой кнопки есть класс btn-color 
+	то это не цыфры */
+	if (f.classList.contains("btn-color")) {//!-->
+		compactBtnClick(f.innerHTML);
 		if (f.innerHTML == "-" || f.innerHTML == "+" ||
 			f.innerHTML == "*" || f.innerHTML == "/") {
-
-			//!________________________________________________________
 			if (clickAction == false && finish == 0) {
+				if (a == '' || a == '0.') {
+					a = '0';
+					result.innerHTML = '0';
+				}
 				result.innerHTML = result.innerHTML + f.innerHTML;
 				clickAction = true;
 				action = f.innerHTML;
@@ -51,25 +47,30 @@ btn.forEach(f => f.addEventListener('click', function () {
 				if (finish == 0) {
 					action = f.innerHTML;
 					result.innerHTML = result.innerHTML.slice(0, -1) + f.innerHTML;
-
 				}
-
 				else
 					actions(action, f.innerHTML);
 			}
-			//!__________________________________________________________
 		}
-		//?__________________________________________________________________
-	}//!...................................................................................
+	}//! <--
 	else {
-		//!>>>>>>>>>>>>>>>>>>>>>>>
 		if (f.innerHTML == 'c')
 			cleen();
 		else
 			sortBtn(f.innerHTML);
-		//!<<<<<<<<<<<<<<<<<<<<<<<
 	}
 }));
+
+//
+function compactBtnClick(btnClick) {
+	if (btnClick == "=")
+		actions(action, btnClick);
+	if (btnClick == 'del')
+		del();
+	if (btnClick == "%")
+		proCent();
+}
+//
 
 // proCent
 function proCent() {
@@ -79,7 +80,6 @@ function proCent() {
 	else {
 		procB();
 	}
-
 }
 
 function procA() {
@@ -106,35 +106,14 @@ function procB() {
 function del() {
 	delite = result.innerHTML;
 	if (action == '') {
-		a = b = c = '';
-		for (let i = 0; i < delite.length; i++) {
-			a += delite.charAt(i)
-		}
-		if (a.length > 1)
-			a = a.slice(0, -1);
-		else
-			a = '0';
-		result.innerHTML = a;
+		compactDel();
 	}
 	else {
 		delite = delite.split(action);
 		if (delite[1].length == 0) {
-			a = c = '';
-			for (let k of delite[0]) {
-				a += k;
-			}
-			a += action;
-			if (a.length > 1)
-				a = a.slice(0, -1);
-			else
-				a = '0';
-			result.innerHTML = a;
-			action = '';
-			clickAction = false;
-			finish = 0;
+			compactDel2();
 		}
 		else {
-
 			b = '';
 			for (let k of delite[1]) {
 				b += k;
@@ -150,10 +129,36 @@ function del() {
 				result.innerHTML = a + action;
 				b = '';
 			}
-
-
 		}
 	}
+}
+
+function compactDel2() {
+	a = c = '';
+	for (let k of delite[0]) {
+		a += k;
+	}
+	a += action;
+	if (a.length > 1)
+		a = a.slice(0, -1);
+	else
+		a = '0';
+	result.innerHTML = a;
+	action = '';
+	clickAction = false;
+	finish = 0;
+}
+
+function compactDel() {
+	a = b = c = '';
+	for (let i = 0; i < delite.length; i++) {
+		a += delite.charAt(i)
+	}
+	if (a.length > 1)
+		a = a.slice(0, -1);
+	else
+		a = '0';
+	result.innerHTML = a;
 }
 // Сброс
 function cleen() {
@@ -162,10 +167,9 @@ function cleen() {
 	clickAction = false;
 	result.innerHTML = '0';
 	finish = 0;
-	procent = false;
 	procentA = ''; procentB = '';
 }
-
+// value = action , value2 = кнопка которую кликнули
 function actions(value, value2) {
 	switch (value) {
 		case '+': sum(value2); break;
@@ -200,7 +204,6 @@ function actionA(value) {
 		else
 			a += value;
 	}
-
 	result.innerHTML = a;
 	c = '';
 }
@@ -229,7 +232,6 @@ function actionB(value) {
 	finish = 1;
 }
 
-//?==========================================================
 //!_________Похожие функции !!! ___________//
 function sum(value) {
 	if (c == '')
