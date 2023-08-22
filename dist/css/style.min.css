@@ -94,14 +94,6 @@ select {
 }
 
 @font-face {
-  font-family: Roboto;
-  font-display: swap;
-  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
   font-family: Poppins;
   font-display: swap;
   src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff");
@@ -114,6 +106,14 @@ select {
   font-display: swap;
   src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -265,6 +265,38 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.worker__title {
+  height: 40px;
+  -webkit-box-shadow: 0 0 5px;
+          box-shadow: 0 0 5px;
+  padding: 10px 0 10px 0;
+  background: #002265;
+  color: #fff;
+  text-align: center;
+}
+
+.worker__title a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.worker__viev {
+  max-width: 400px;
+  min-height: 300px;
+  -webkit-box-shadow: 0 0 5px;
+          box-shadow: 0 0 5px;
+}
+
+.worker__viev img {
+  width: 400px;
+  height: 300px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 footer {
@@ -276,7 +308,7 @@ footer {
 }
 
 footer h4 {
-  margin-top: 370px;
+  margin-top: 200px;
   font-weight: 400;
   font-size: 25px;
   color: #fff;

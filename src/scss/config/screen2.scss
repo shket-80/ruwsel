@@ -24,4 +24,32 @@
 .worker {
 	margin-top: 60px;
 	display: flex;
+	justify-content: space-between;
+
+	&__title {
+		height: 40px;
+		box-shadow: 0 0 5px;
+		padding: 10px 0 10px 0;
+		background: #002265;
+		color: #fff;
+		text-align: center;
+
+		a {
+			text-decoration: none;
+			color: #fff;
+		}
+	}
+
+	&__viev {
+		max-width: 400px;
+		min-height: 300px;
+		//border: 1px black solid;
+		box-shadow: 0 0 5px;
+
+		img {
+			width: 400px;
+			height: 300px;
+			object-fit: contain;
+		}
+	}
 }
