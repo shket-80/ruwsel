@@ -16,5 +16,10 @@ for (let anchor of anchors) {
 // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
-
+const burger = document.querySelector('.burger');
+const burg = document.querySelector('.burg');
+burg.addEventListener("click", function () {
+	burger.classList.toggle('aktive');
+	//burger.classList.toggle('aktive');
+});
 

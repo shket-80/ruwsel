@@ -141,7 +141,7 @@ body {
 }
 
 header {
-  height: 84px;
+  min-height: 84px;
 }
 
 .navbar {
@@ -152,6 +152,14 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.navbar img {
+  width: 30px;
+  height: 30px;
+  -webkit-box-shadow: 0 0 5px;
+          box-shadow: 0 0 5px;
+  display: none;
 }
 
 .logo {
@@ -184,6 +192,29 @@ header {
 }
 
 .nav-menu a:hover {
+  background: blue;
+  color: #fff;
+}
+
+.burger {
+  font-size: 20px;
+  display: none;
+}
+
+.burger__nav {
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px;
+          box-shadow: 0 0 5px;
+}
+
+.burger__nav a {
+  display: block;
+  text-decoration: none;
+  color: #212121;
+  padding: 0 15px 0 15px;
+}
+
+.burger__nav a:hover {
   background: blue;
   color: #fff;
 }
@@ -461,6 +492,14 @@ footer h4 {
 @media screen and (max-width: 750px) {
   .nav-menu {
     display: none;
+  }
+
+  .navbar img {
+    display: block;
+  }
+
+  .aktive {
+    display: block;
   }
 }
 

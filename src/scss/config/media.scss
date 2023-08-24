@@ -28,11 +28,22 @@
 
 		flex-direction: column;
 	}
+
 }
 
 @media screen and (max-width: 750px) {
 	.nav-menu {
 		display: none;
+	}
+
+	.navbar {
+		img {
+			display: block;
+		}
+	}
+
+	.aktive {
+		display: block;
 	}
 }
 
@@ -44,4 +55,5 @@
 			margin: 0 auto;
 		}
 	}
+
 }
