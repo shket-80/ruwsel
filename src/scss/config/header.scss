@@ -8,13 +8,6 @@ header {
 	display: flex;
 	justify-content: space-between;
 
-	img {
-		width: 30px;
-		height: 30px;
-		box-shadow: 0 0 5px;
-		display: none;
-	}
-
 }
 
 .logo {
@@ -48,18 +41,25 @@ header {
 		background: blue;
 		color: #fff;
 	}
+
 }
+
+
 
 //Burger
 .burger {
-
-	font-size: 20px;
+	font-size: 0px;
 	//box-shadow: 0 0 5px;
 	display: none;
-	// transform: translateY(-100%);
-	// transition: transform 0.5s;
+	//transition: font-size, transform 2s;
+
+	&__container {
+		min-width: 100%;
+		display: none;
+	}
 
 	&__nav {
+		position: relative;
 		border-radius: 5px;
 		box-shadow: 0 0 5px;
 
@@ -73,14 +73,56 @@ header {
 			//border: 1px rgb(127, 153, 41) solid;
 		}
 
-		a:hover {
-			background: blue;
-			color: #fff;
+		// a:hover {
+		// 	background: blue;
+		// 	color: #fff;
+		// }
+
+		a:visited {
+			text-decoration: none;
+			background: #fff;
+			color: #212121;
 		}
 
 	}
 }
 
-// .aktive {
-// 	transform: translateY(0);
-// }
+.burg {
+	width: 30px;
+	height: 30px;
+	box-shadow: 0 0 5px;
+	display: none;
+}
+
+.aktive {
+	display: block;
+	font-size: 20px;
+	animation-duration: 0.5s;
+	animation-name: burgshou;
+}
+
+.navhiden {
+	display: block;
+	animation-duration: 0.5s;
+	animation-name: burghiden;
+}
+
+@keyframes burgshou {
+	from {
+		font-size: 0px;
+	}
+
+	to {
+		font-size: 20px;
+	}
+}
+
+@keyframes burghiden {
+	from {
+		font-size: 20px;
+	}
+
+	to {
+		font-size: 0px;
+	}
+}

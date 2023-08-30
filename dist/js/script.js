@@ -16,10 +16,18 @@ for (let anchor of anchors) {
 // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
-const burger = document.querySelector('.burger');
+const burger = document.querySelector('.burger__container');
 const burg = document.querySelector('.burg');
 burg.addEventListener("click", function () {
-	burger.classList.toggle('aktive');
+	if (burger.classList.contains('aktive')) {
+		burger.classList.remove('aktive');
+		burger.classList.add('navhiden');
+	}
+	else {
+		burger.classList.add('aktive');
+		burger.classList.remove('navhiden');
+	}
+
 	//burger.classList.toggle('aktive');
 });
 
