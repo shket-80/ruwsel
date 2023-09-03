@@ -84,3 +84,22 @@
 .hiden {
 	display: none;
 }
+
+.minslider {
+	display: flex;
+	width: auto;
+	max-height: 50px;
+
+	img {
+		max-width: 80px;
+		height: 100%;
+		height: 50px;
+		object-fit: contain;
+		box-shadow: 1px 4px 30px 18px #b4b1b1;
+
+	}
+}
+
+.activimg {
+	border: 3px rgba($color: #000000, $alpha: .5) solid;
+}

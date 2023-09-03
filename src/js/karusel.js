@@ -5,12 +5,22 @@ const sliderItem = Array.from(slider.children);// Превращаем HTML ко
 let slideinfo = document.querySelector('.slideinfo');
 const next = document.querySelector('.next');
 const preev = document.querySelector('.preev');
+const minimg = document.querySelector('#minimg');
 //Перебираем массив слайдов
 sliderItem.forEach(function (slide, index) {
+
+	//minimg.insertAdjacentHTML('afterend', '<img src="img/karusel/img2.jpeg" alt="1">');
 	//alert(slide.getAttribute('src'))
+	const srcslide = slide.getAttribute('src');
 	// Скрываем все слайды кроме первого
-	if (index !== 0) slide.classList.add('hiden')
+	if (index !== 0) {
+		slide.classList.add('hiden');
+		minimg.insertAdjacentHTML('afterend',
+			`<img src="${srcslide}" data-index="${index}" class="minimage"  alt="1">`);
+	}
 	else {
+		minimg.insertAdjacentHTML('afterend',
+			`<img src="${srcslide}" data-index="${index}" data-activ class="minimage activimg"  alt="1">`);
 		slideinfo.innerHTML = slide.getAttribute('src');
 		slide.setAttribute('data-activ', '');
 	}
