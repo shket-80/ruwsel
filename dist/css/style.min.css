@@ -80,24 +80,8 @@ select {
 @font-face {
   font-family: Poppins;
   font-display: swap;
-  src: url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Poppins;
-  font-display: swap;
   src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff");
   font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Roboto;
-  font-display: swap;
-  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -114,6 +98,22 @@ select {
   font-display: swap;
   src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Roboto;
+  font-display: swap;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -554,8 +554,8 @@ footer h4 {
   opacity: 1;
   -webkit-animation-name: anime;
           animation-name: anime;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 .slider__block {
@@ -573,7 +573,7 @@ footer h4 {
   width: 50px;
   height: 50px;
   font-size: 25px;
-  background: rgba(112, 111, 111, 0.2);
+  background: rgba(112, 111, 111, 0.5);
   color: rgba(252, 251, 251, 0.7);
   text-align: center;
 }
@@ -583,6 +583,17 @@ footer h4 {
 }
 
 .btn:hover {
+  background: #706f6f;
+  color: #fcfbfb;
+  cursor: pointer;
+}
+
+.btn:focus {
+  background: rgba(112, 111, 111, 0.5);
+  color: rgba(252, 251, 251, 0.7);
+}
+
+.btn:active {
   background: #706f6f;
   color: #fcfbfb;
   cursor: pointer;
@@ -616,22 +627,38 @@ footer h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: auto;
   max-height: 50px;
 }
 
 .minslider img {
-  max-width: 80px;
-  height: 100%;
+  width: 80px;
   height: 50px;
   -o-object-fit: contain;
      object-fit: contain;
-  -webkit-box-shadow: 1px 4px 30px 18px #b4b1b1;
-          box-shadow: 1px 4px 30px 18px #b4b1b1;
+  border-radius: 30%;
+  margin: 0 4px 0 4px;
+}
+
+.minimage {
+  -webkit-box-shadow: 1px 1px 30px 10px #fafafa;
+          box-shadow: 1px 1px 30px 10px #fafafa;
 }
 
 .activimg {
-  border: 3px rgba(0, 0, 0, 0.5) solid;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 40px;
+  border: 5px rgba(3, 253, 24, 0.5) solid;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.minblock {
+  max-width: 600px;
+  height: 70px;
+  padding: 10px 5px 10px 5px;
+  background: #000000;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 952px) {
